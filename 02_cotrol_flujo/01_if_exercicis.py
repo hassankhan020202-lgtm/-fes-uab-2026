@@ -59,8 +59,14 @@ else:
 # sembla funcionar correctament.
 
 los = input("L'indicador LOS està encès? (si o no)")
+internet = input( "L'indicador d'internet del router està encès? (sí o no)") 
 
-
+if los == "si":
+    print ("Cal revisar el cable de la fibra.")
+elif internet == "no":
+    print ("Cal comprovar el servei del proveidor.")
+else:
+    print ("La connexió sembla que funciona bé.")
 
 # Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
@@ -68,5 +74,14 @@ los = input("L'indicador LOS està encès? (si o no)")
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
 # del 0 % al 100 %.
 
+bateria = float (input("Introdueix el percentatge de bateria: "))
 
+if bateria < 0 or bateria > 100:
+    print ("Valor fora del rang vàlid de 0-100%")
+elif bateria < 20:
+    print ("La bateria està en nivell crític.")
+elif bateria < 50:
+    print ("La bateria està en nivell baix.")
+else:
+    print ("La bateria està en nivell suficient.")
 
