@@ -26,6 +26,7 @@ print(f"El enllaç de {longitud_fibra} km li caldrien {temps_transmissió} segon
 # Demana el nombre d'hores de feina i el preu per hora d'una instal·lació de xarxa.
 # Demana també el preu del material.
 # Mostra el cost total de la instal·lació.
+
 hores_feina = float(input("Hores de feina: "))
 preu_per_hora = float(input("Preu per hora: "))
 preu_material = float(input("Preu material: "))
