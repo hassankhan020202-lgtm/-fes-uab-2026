@@ -85,3 +85,130 @@ elif bateria < 50:
 else:
     print ("La bateria està en nivell suficient.")
 
+
+
+
+
+# Exercici 6: Qualitat d'una connexió de xarxa
+# Demana la latència en mil·lisegons i el percentatge de paquets perduts.
+# Rebutja una latència negativa o una pèrdua fora del rang del 0 % al 100 %.
+# Classifica la connexió com a excel·lent si la latència és de 30 ms o menys
+# i la pèrdua és de l'1 % o menys; bona si és de 80 ms o menys i la pèrdua és
+# del 3 % o menys; acceptable si és de 150 ms o menys i la pèrdua és del 5 %
+# o menys; en qualsevol altre cas, deficient.
+
+
+latencia = float(input("Quantitat de latència (ms): "))
+paquets_perduts = float(input("Percentatge de paquets perduts: "))
+
+if latencia < 0 or paquets_perduts < 0 or paquets_perduts > 100:
+    print ("Dades incorrectes")
+elif latencia <= 30 and paquets_perduts <= 1:
+    print ("Connexió excel·lent")
+elif latencia <= 80 and paquets_perduts <= 3:
+    print ("Connexió bona")
+elif latencia <= 150 and paquets_perduts <= 5:
+    print ("Connexió acceptable")
+else:
+    print ("Connexió deficient")
+
+
+
+# Exercici 7: Cost mensual d'un pla de dades
+# Demana el tipus de pla (bàsic o plus) i el consum mensual en GB.
+# El pla bàsic costa 10 € i inclou 10 GB; cada GB addicional costa 1,50 €.
+# El pla plus costa 20 € i inclou 30 GB; cada GB addicional costa 0,75 €.
+# Rebutja un consum negatiu o un tipus de pla desconegut. Calcula i mostra el
+# cost total, tenint en compte que no es cobra l'excés si no se supera el límit.
+
+pla = input ("Tipus de pla basic o plus: ")
+consum = float (input ("Consum mensual en GB: "))
+
+
+if consum < 0: 
+    print ("Valors invalids")
+elif pla == "basic":
+    if consum <= 10:
+        cost = 10
+    else:
+        cost = 10 + (consum -10) * 1.50
+    print (f"Cost total: {cost:.2f} euros")
+elif pla == "plus":
+    if consum <= 30:
+        cost = 20
+    else: 
+        cost = 20 + (consum -30) * 0.75
+    print (f"Cost total:{cost:.2f} euros")
+else:
+    print ("Pla desconegut")
+
+
+# Exercici 8: Accés a un compte de client
+# Demana si el compte està actiu, si la contrasenya és correcta i si el codi
+# de doble verificació és correcte. Demana el codi només si el compte és actiu
+# i la contrasenya és correcta. Indica si l'accés es denega perquè el compte
+# està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
+# si totes les comprovacions necessàries són correctes, permet l'accés.
+
+actiu = input ("El compte està actiu? (si o no): ")
+contrasenya = input ("La contrasenya és correcte? (si o no): ")
+
+if actiu != "si":
+    print ("Acces denegat per compte desactivat")
+elif contrasenya != "si":
+    print ("Acces denegat per contrasenya incorrecte")
+else:
+    codi = input ("El codi de doble verificació és correcte? (si o no): ")
+    if codi == "si":
+        print("Acces permès")
+    else:
+        print ("Acces denegat codi incorrecte")
+
+ 
+
+# Exercici 9: Diagnòstic d'un router
+# Demana si el router està encès, si l'indicador LOS del terminal òptic està
+# encès i si l'indicador d'Internet del router està encès. Indica primer si
+# cal encendre el router; si ja està encès, comprova si cal revisar el cable
+# de fibra (LOS encès), si cal contactar amb el proveïdor (Internet apagat) o
+# si la connexió funciona correctament. Considera els casos en aquest ordre.
+
+router = input ("El router està encès? (si o no): ")
+
+if router != "si":
+    print ("Router apagat")
+else:
+    los = input ("L'indicador LOS està encès? (si o no): ")
+    if los == "si":
+        print ("Cal revisar el cable de fibra")
+    else:
+        internet = input ("L'indicadpr d'internet esta encès? (si o no)")
+
+        if internet != "si":
+            print ("Cal contactar amb el proveidor")
+        else:
+            print ("La conexió funciona correctament")
+
+
+
+# Exercici 10: Prioritat d'una incidència de xarxa
+# Demana si la incidència afecta un servei crític, el nombre d'usuaris afectats
+# i si hi ha una alternativa de connexió disponible. Rebutja un nombre negatiu
+# d'usuaris. Assigna prioritat crítica si afecta un servei crític i no hi ha
+# alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
+# afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
+
+critic = input ("Afecta un servei crític? (si o no): ")
+usuaris = int (input("Nombre d'ususariis: "))
+alternativa = input("Hi ha una alternativa? (si o no)")
+
+if usuaris < 0:
+    print ("Nombre invalid")
+elif (critic == "si" and alternativa != "si") or (usuaris >= 50 and alternativa != "si"):
+    print ("Prioritat critica")
+elif usuaris >= 10 or critic == "si":
+    print ("Prioritat alta")
+else:
+    print ("Prioritat baixa")
+
+
