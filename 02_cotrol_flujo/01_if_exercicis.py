@@ -2,6 +2,83 @@
 # EXERCICIS
 ###
 
+# Exercici 1: Determinar el més gran de dos nombres
+# Demana a l'usuari que introdueixi dos nombres i mostra un missatge
+# que indiqui quin és més gran o si són iguals.
+
+a = float(input("Introdueix el primer numero:"))
+b = float(input("Introdueix el segon numero:"))
+
+if a > b: 
+    print ("El primer es més gran")
+elif a < b:
+    print ("El segon és mes gran")
+else:
+    print ("Son iguals")
+
+
+# Exercici 2: Calculadora senzilla
+# Demana a l'usuari dos nombres i una operació (+, -, *, /).
+# Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+
+a = float (input("Introdueix un numero:"))
+b = float (input("Introdueix un segon numero:"))
+operacio = int(input("Introdueix una operació (+, -, *, /): "))
+
+if operacio == "+":
+    print ("Resultat:", a+b)
+elif operacio == "-":
+    print("Resultat:", a-b)
+elif operacio == "*":
+    print ("Resultat:", a*b)
+elif operacio =="/":
+    if b !=0:
+        print("Resultat:", a/b)
+    else:
+        print("Error de denominador")
+else:
+    print("Operacions invalides")
+
+# Exercici 3: Any de traspàs
+# Demana a l'usuari que introdueixi un any i determina si és de traspàs.
+# Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
+# però no per 400.
+
+any = int(input("Introdueix un any:"))
+
+if any % 400 == 0:
+    print("Es un any de traspas")
+elif any % 100 == 0:
+    print("No es un any de traspas")
+elif any % 4 == 0:
+    print ("Es un any de traspas")
+else:
+    print ("No es un any de traspas")
+
+# Exercici 4: Classificar edats
+# Demana a l'usuari que introdueixi una edat i classifica-la en:
+# - Nadó (0-2 anys)
+# - Infant (3-12 anys)
+# - Adolescent (13-17 anys)
+# - Adult (18-64 anys)
+# - Persona gran (65 anys o més)
+
+edat = int(input("Introdueix la teva edat: "))
+
+if edat < 0:
+    print("Edat no valida")
+elif edat < 2:
+    print ("Nado")
+elif edat < 12:
+    print("Infant")
+elif edat < 17:
+    print ("Adolescent")
+elif edat < 64:
+    print("Adult")
+else:
+    print ("Persona gran")
+
+
 # Exercici 1: Qualitat del senyal Wi-Fi
 # Demana el nivell de senyal rebut (RSSI) en dBm i classifica la cobertura:
 # - -50 dBm o superior: excel·lent
