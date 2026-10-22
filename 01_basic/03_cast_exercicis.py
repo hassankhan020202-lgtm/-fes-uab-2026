@@ -8,7 +8,7 @@
 # introduït a un nombre enter, suma-hi 1200 paquets i mostra el total.
 
 paquets_rebuts = int(input("Quants paquets ha rebut l'encaminador? "))
-total_paquets = paquets_rebuts + 1200    #aquest pas es podria evitar y posar les dues linies, aquesta y la anterior com a una, fent la suma e la de abans directament.
+total_paquets = paquets_rebuts + 1200    
 print (f"Total de paquets:  {total_paquets}")  #el print f se hacia cuando habia algun valor que poner dentro del print, cuando solo es texto hacemos solo print()
 
 # Exercici 2
