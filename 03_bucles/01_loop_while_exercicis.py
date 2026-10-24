@@ -33,6 +33,10 @@ numero = int(input("Introdueix un numero enter positiu: "))
 
 factorial = 1
 i = 1
+
+while numero < 0:
+    numero = int(input("Error, introdueix un número positiu: "))
+
 while i <= numero:
     factorial = factorial *i
     i = i+1
@@ -81,6 +85,7 @@ while numero <= N:
     while divisor < numero:
         if numero % divisor ==0:
             primer = False
+            break 
         divisor = divisor +1
     if primer:
         print(numero)
@@ -126,6 +131,21 @@ print ("El nombre de xifres és:", xifres)
 # La seqüència comença per 0 i 1; cada terme següent és la suma dels dos anteriors.
 
 termes = int(input("Quants numeros vols veure?"))
+i=0
+a=0
+b=1
+
+
+while termes < 0:
+    termes = int(input("Introdueix un nombre positiu: "))
+
+while i < termes:
+    print (a)
+    seguent = a+b
+    a=b
+    b = seguent 
+    i = i+1
+
 
 
 
@@ -135,3 +155,15 @@ termes = int(input("Quants numeros vols veure?"))
 # fins que l'encerti.
 # Després de cada intent incorrecte, indica si el número secret és més gran o més petit.
 
+secret = 7
+numero = int(input("Quin es el numero secret?"))
+
+while numero != secret:
+    if numero < secret:
+        print ("Numero secret es mes gran")
+    else:
+        print("Numero sectret es mes petit")
+
+    numero = int(input("Torna a provar:"))
+
+print ("Correcte")

@@ -23,7 +23,8 @@ else:
 
 a = float (input("Introdueix un numero:"))
 b = float (input("Introdueix un segon numero:"))
-operacio = int(input("Introdueix una operació (+, -, *, /): "))
+operacio = input("Introdueix una operació (+, -, *, /): ")
+
 
 if operacio == "+":
     print ("Resultat:", a+b)
@@ -67,13 +68,13 @@ edat = int(input("Introdueix la teva edat: "))
 
 if edat < 0:
     print("Edat no valida")
-elif edat < 2:
+elif edat <= 2:
     print ("Nado")
-elif edat < 12:
+elif edat <= 12:
     print("Infant")
-elif edat < 17:
+elif edat <= 17:
     print ("Adolescent")
-elif edat < 64:
+elif edat <= 64:
     print("Adult")
 else:
     print ("Persona gran")
@@ -122,7 +123,9 @@ else:
 consum_gb_mensual = float(input("Introdueix el consum de dades (GB): "))
 limit_gb = 20
 
-if consum_gb_mensual <= limit_gb:
+if consum_gb_mensual < 0:
+    print("El consum no pot ser negatiu")
+elif consum_gb_mensual <= limit_gb:
     print ("El consum està dins del límit.")
 else:
     gb_addicional = consum_gb_mensual - limit_gb
@@ -135,8 +138,8 @@ else:
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
 
-los = input("L'indicador LOS està encès? (si o no)")
-internet = input( "L'indicador d'internet del router està encès? (sí o no)") 
+los = input("L'indicador LOS està encès? (si o no)").strip().lower()
+internet = input( "L'indicador d'internet del router està encès? (sí o no)").strip().lower()
 
 if los == "si":
     print ("Cal revisar el cable de la fibra.")
@@ -198,7 +201,7 @@ else:
 # Rebutja un consum negatiu o un tipus de pla desconegut. Calcula i mostra el
 # cost total, tenint en compte que no es cobra l'excés si no se supera el límit.
 
-pla = input ("Tipus de pla basic o plus: ")
+pla = input ("Tipus de pla basic o plus: ").strip().lower()
 consum = float (input ("Consum mensual en GB: "))
 
 
@@ -227,15 +230,15 @@ else:
 # està desactivat, perquè la contrasenya és incorrecta o perquè falla el codi;
 # si totes les comprovacions necessàries són correctes, permet l'accés.
 
-actiu = input ("El compte està actiu? (si o no): ")
-contrasenya = input ("La contrasenya és correcte? (si o no): ")
+actiu = input ("El compte està actiu? (si o no): ").strip().lower()
+contrasenya = input ("La contrasenya és correcte? (si o no): ").strip().lower()
 
 if actiu != "si":
     print ("Acces denegat per compte desactivat")
 elif contrasenya != "si":
     print ("Acces denegat per contrasenya incorrecte")
 else:
-    codi = input ("El codi de doble verificació és correcte? (si o no): ")
+    codi = input ("El codi de doble verificació és correcte? (si o no): ").strip().lower()
     if codi == "si":
         print("Acces permès")
     else:
@@ -259,7 +262,7 @@ else:
     if los == "si":
         print ("Cal revisar el cable de fibra")
     else:
-        internet = input ("L'indicadpr d'internet esta encès? (si o no)")
+        internet = input ("L'indicadpr d'internet esta encès? (si o no)").strip().lower()
 
         if internet != "si":
             print ("Cal contactar amb el proveidor")
@@ -275,9 +278,9 @@ else:
 # alternativa, o si afecta almenys 50 usuaris i no hi ha alternativa; alta si
 # afecta almenys 10 usuaris o un servei crític; en qualsevol altre cas, baixa.
 
-critic = input ("Afecta un servei crític? (si o no): ")
+critic = input ("Afecta un servei crític? (si o no): ").strip().lower()
 usuaris = int (input("Nombre d'ususariis: "))
-alternativa = input("Hi ha una alternativa? (si o no)")
+alternativa = input("Hi ha una alternativa? (si o no)").strip().lower()
 
 if usuaris < 0:
     print ("Nombre invalid")
