@@ -30,7 +30,7 @@ print (nombres)
 # pa_de_sota = ["pa de sota"]
 # Crea una llista anomenada entrepa que contingui, en aquest ordre, el pa de dalt,
 # els ingredients i el pa de sota.
-
+ 
 pa_de_dalt = ["pa de dalt"]
 ingredients = ["pernil", "formatge", "tomàquet"]
 pa_de_sota = ["pa de sota"]
@@ -66,5 +66,5 @@ print (central)
 llista = [1, 2, 3, 4, 5, 6] 
 meitat = len (llista) //2
 
-resultat = llista[meitat - 1 :: -1] + llista [meitat:]
+resultat = llista[meitat-1::-1] + llista [meitat:]
 print(resultat)
