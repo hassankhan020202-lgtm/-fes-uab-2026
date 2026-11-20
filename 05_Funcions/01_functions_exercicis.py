@@ -117,7 +117,7 @@ print(maxim_llista([4, 8, 2, 10, 5]))
 
 
 def comptar_vocals(text):
-    vocals = "(a,e,i,o,u)"
+    vocals = "aeiou"
     comptador = 0
 
     for lletra in text.lower():
@@ -174,4 +174,4 @@ def es_palindrom(text):
 
 
 print(es_palindrom("Radar"))
-print(es_palindrom("Hola"))
+print(es_palindrom("Hola")) 
