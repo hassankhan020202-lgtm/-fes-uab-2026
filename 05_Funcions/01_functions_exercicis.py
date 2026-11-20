@@ -46,7 +46,6 @@ print(mitjana([5,7,8,10]))
 # Crea una funció sumar_tot(*args) que retorni la suma de tots els números rebuts.
 # Prova-la amb 2, 5 i 10 arguments.
 
-
 def sumar_tot(*args):
     suma=0
 
@@ -57,7 +56,6 @@ def sumar_tot(*args):
 print(sumar_tot(1,2))
 print(sumar_tot(1,2,3,4,5))
 print(sumar_tot(1,2,3,4,5,6,7,8,9,10))
-
 
 # Exercici 5: Taula de multiplicar
 # Crea una funció taula_multiplicar(numero, limit=10) que imprimeixi la taula de multiplicar
@@ -70,7 +68,6 @@ def taula_multiplicar(numero, limit=10):
 
 taula_multiplicar(5)
 taula_multiplicar(3,5)
-
 
 # Exercici 6: Informació amb **kwargs
 # Crea una funció mostrar_perfil(**kwargs) que imprimeixi cada parella clau: valor.
@@ -86,7 +83,6 @@ mostrar_perfil(nom="Hassan", edat=21, grau="Telecos")
 # Exercici 7: Reconvertir exercicis anteriors
 # Torna a l'exercici del factorial (while) i del màxim d'una llista (for)
 # i converteix-los en funcions que retornin el resultat.
-
 
 def factorial(numero):
     resultat=1
@@ -115,9 +111,8 @@ print(maxim_llista([4, 8, 2, 10, 5]))
 # Crea una funció comptar_vocals(text) que rebi una cadena de text i retorni quantes vocals
 # (a, e, i, o, u) conté. Ha de funcionar tant amb majúscules com amb minúscules.
 
-
 def comptar_vocals(text):
-    vocals = "aeiou"
+    vocals = "(a,e,i,o,u)"
     comptador = 0
 
     for lletra in text.lower():
@@ -156,11 +151,9 @@ print("Màxim:", maxim)
 
 
 
-
 # Exercici 10: Palíndrom
 # Crea una funció es_palindrom(text) que retorni True si una paraula es llegeix igual d'esquerra a dreta
 # que de dreta a esquerra (ignorant majúscules i minúscules), i False en cas contrari.
-
 
 
 def es_palindrom(text):
@@ -174,4 +167,4 @@ def es_palindrom(text):
 
 
 print(es_palindrom("Radar"))
-print(es_palindrom("Hola")) 
+print(es_palindrom("Hola"))
